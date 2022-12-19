@@ -29,7 +29,7 @@ const [records, setRecords]= useState([]);
     }
   return (
     <>
-    <div>
+    <div className='registration-form'>
      <form action="" onSubmit={handleSubmit}>
      <h1>Registration Form</h1>
  
@@ -39,43 +39,49 @@ const [records, setRecords]= useState([]);
             <input type="text" autoComplete="off" 
             value={userRegistration.username} 
             onChange={handleInput} 
-            name="username" id="username" placeholder="Enter Your Full Name"/>
+            name="username" id="username" placeholder="Enter Your Full Name" required/>
         </div>
         <div>
             <label htmlFor="phone">Phone Number</label>
             <input type="text" autoComplete="off" 
              value={userRegistration.phone} 
              onChange={handleInput} 
-              name="phone" id="phone" placeholder="Enter Your Contact Number"/>
+              name="phone" id="phone" placeholder="Enter Your Contact Number" required/>
         </div>
         <div>
             <label htmlFor="email">E-mail</label>
             <input type="text" autoComplete="off" 
              value={userRegistration.email} 
              onChange={handleInput} 
-              name="email" id="email" placeholder="Enter Your E-mail"/>
+              name="email" id="email" placeholder="Enter Your E-mail" required/>
         </div>
         <div>
             <label htmlFor="password">Password</label>
             <input type="password" autoComplete="off" 
              value={userRegistration.password} 
              onChange={handleInput} 
-             name="password" id="password" placeholder="Create Your Password"/>
+             name="password" id="password" placeholder="Create Your Password" required/>
         </div>
        <button type="submit">Submit</button>
      </form>
      </div>
 
-     <div>
+     <div className='sheet'>
         {
             records.map((curElem)=>{
                 const {id, username,phone, email, password}=curElem;
                 return(
                     <div className="showDataStyle" key={id}>
-                        <p>{username}</p>
-                        <p>{phone}</p>
-                        <p>{email}</p>
-                        <p>{password}</p>
+                        {/* <p>username:{username}contact no.:{phone},e-mail:{email},password:{password}</p> */}
+                        {/* <p>{phone}</p> */}
+                        {/* <p>{email}</p>
+                        <p>{password}</p> */}
+                        <p>
+                            <span className='one'>{username}</span>
+                            <span className='two'>{phone}</span>
+                            <span className='three'>{email}</span>
+                            <span className='four'>{password}</span>
+                        </p>
                     </div>
                 )
             })

@@ -36,4 +36,125 @@
     transform: rotate(360deg);
   }
 } */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0.5px;
+  
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; */
+  background: rgb(155, 189, 144);
+}
 
+.registration-form{
+  background-color: rgb(255, 250, 250);
+  
+ 
+  position: absolute;
+  top:35%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:500px;
+  height:450px;
+  margin:20px;
+  padding: 0px 50px ;
+} 
+
+.registration-form h1{
+  font-size: 20px;
+  text-align: center;
+  /* padding: 20px 0; */
+  margin:20px 0;
+
+}
+
+.registration-form label{
+  font-size:15px;
+  font-weight: 500;
+  padding:40px 20px;
+  
+
+}
+
+.registration-form input{
+  font-size:13px;
+  margin:2px 7px 20px 20px;
+  padding:5px;
+  width:350px;
+  display: flex;
+  background-color: rgb(233, 232, 232);
+  /* justify-content:flex-end; */
+  
+}
+.registration-form button{
+  font-size: 15px;
+  font-weight: 600;
+  margin:1px 20px;
+  padding:5px;
+  width:100px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(192, 168, 13);
+}
+
+.registration-form button:hover{
+  color:rgba(0, 60, 255, 0.783);
+}
+
+.sheet{
+  background-color: rgb(255, 255, 255);
+  margin:0px 20px;
+  position: absolute;
+  
+  transform: translate(-50%,-50%);
+  width:900px;
+  height:80px;
+ 
+  top:90%;
+ 
+  left:50%; 
+  right:50%; 
+  
+  bottom:0px;
+  
+  overflow-y: scroll;
+}
+
+.sheet span .one,.two, .three,.four{
+   /* display: inline; */
+   padding: 0px 50px ;
+
+}
+
+@media (max-width: 584px) {
+  .registration-form{
+    width: 321px;
+    padding: 50px 34px;
+    overflow-y: scroll;
+    position: fixed;
+    
+  }
+  .registration-form input{
+    width: 221px;
+    
+  }
+  .registration-form label{
+    width: 100%;
+  }
+  .user-details{
+   max-height: 300px;
+   overflow-y: scroll;
+  }
+  .sheet{
+    width: 86%;
+    overflow: scroll;
+    margin: 20px;
+  }
+} 
